@@ -1,8 +1,11 @@
 .navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   display: flex;
   justify-content: space-evenly;
   padding: 7px 20px;
-  gap: 100px;
+  gap: 5vw;
   background-color: white;
   color: #242424;
 }
@@ -28,7 +31,7 @@
     }
 
     a:hover {
-      color: rgb(0, 132, 255);
+      color: #ff6f61;
     }
   }
 }
@@ -78,20 +81,21 @@
 /* HERO */
 
 .hero-container {
-  padding: 0px 200px;
   height: 90vh;
-  display: flex;
-  align-items: center;
 }
 
 .hero-content {
-  padding: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: 0vh 15vw;
 
   h1 {
     font-size: 65px;
   }
   p {
-    color: gray;
+    color: #ff6e61c7;
     font-size: 18px;
   }
 }
@@ -107,6 +111,10 @@
   flex-direction: column;
   gap: 25px;
   padding: 0px 5vw;
+
+  p {
+    padding: 0vh 20vw;
+  }
 }
 
 /* SKILLS  */
@@ -126,6 +134,7 @@
   flex-direction: column;
   gap: 16px;
   padding: 1.7rem;
+  border-radius: 5.5px;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
   height: 100%; /* makes each card match the tallest in its row */
@@ -158,4 +167,119 @@ img {
 .fill {
   background: linear-gradient(90deg, #5a5a5a, black);
   height: 100%;
+}
+
+/* FOOTER */
+
+.footer-container {
+  background-color: #1c1c1c;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2vw 3vh;
+}
+
+.l-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 4vw;
+}
+
+.r-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 35%;
+  li {
+    list-style-type: none;
+    font-size: 0.7rem;
+    cursor: pointer;
+    padding: 3px 0px;
+  }
+  li:hover {
+    color: #ff6f61;
+  }
+}
+
+.social-links,
+.quick-links {
+  h4 {
+    padding-bottom: 1vh;
+  }
+}
+
+/* conntact  */
+
+.contact-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: row;
+  border: 2px solid rgba(57, 57, 57, 0.26);
+  padding: 13vh 2vw;
+  border-radius: 15px;
+}
+
+.l-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 9vw;
+  h1 {
+    padding-bottom: 2vh;
+  }
+  p {
+    color: gray;
+    font-size: 0.9rem;
+  }
+}
+
+.r-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+
+  .submit {
+    background-color: #242424;
+    color: white;
+    transition: 0.35s ease-in-out, color 0.35s ease-in-out;
+  }
+
+  .submit:hover {
+    background-color: white;
+    border: 1px solid #242424;
+    color: #242424;
+    transition: 0.35s ease-in-out, color 0.35s ease-in-out;
+  }
+
+  input,
+  textarea {
+    background-color: #fff;
+    height: 31px;
+    width: 25vw;
+    padding: 3px 7px;
+    line-height: normal;
+    border: 1px solid #a6a6a6;
+    border-top-color: #949494;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgb(255 255 255 / 50%), 0 1px 0 rgb(0 0 0 / 7%) inset;
+    outline: 0;
+    color: #111;
+    font-size: 13px;
+    :focus {
+      border-color: #e77600;
+      box-shadow: 0 0 3px 2px rgb(228 121 17 / 50%);
+    }
+  }
+
+  textarea {
+    height: 17vh;
+  }
 }
