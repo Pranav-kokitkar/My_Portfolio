@@ -2,42 +2,42 @@
   {
     "id": 1,
     "name": "HTML",
-    "image": "https://simpleicons.org/icons/html5.svg",
+    "image": "https://img.icons8.com/?size=100&id=23028&format=png&color=FFFFFF",
     "knowledge": 97,
     "description": "Expert in semantic HTML and clean, accessible markup."
   },
   {
     "id": 2,
     "name": "CSS",
-    "image": "https://simpleicons.org/icons/css.svg",
+    "image": "https://img.icons8.com/?size=100&id=f8SJDlHfzi80&format=png&color=FFFFFF",
     "knowledge": 95,
     "description": "Proficient in Flexbox, Grid, and responsive UI styling."
   },
   {
     "id": 3,
     "name": "JavaScript",
-    "image": "https://simpleicons.org/icons/javascript.svg",
+    "image": "https://img.icons8.com/?size=100&id=106036&format=png&color=FFFFFF",
     "knowledge": 90,
     "description": "Strong in ES6+, DOM manipulation, and asynchronous programming."
   },
   {
     "id": 4,
     "name": "React",
-    "image": "https://simpleicons.org/icons/react.svg",
+    "image": "https://img.icons8.com/?size=100&id=VdbUaq1ZLjT2&format=png&color=FFFFFF",
     "knowledge": 77,
     "description": "Experienced in Hooks, Router, and component-based architecture."
   },
   {
     "id": 5,
     "name": "Python",
-    "image": "https://simpleicons.org/icons/python.svg",
+    "image": "https://img.icons8.com/?size=100&id=12584&format=png&color=FFFFFF",
     "knowledge": 70,
     "description": "Comfortable with scripting, data analysis, and basic automation."
   },
   {
     "id": 6,
     "name": "Unity Engine",
-    "image": "https://simpleicons.org/icons/unity.svg",
+    "image": "https://img.icons8.com/?size=100&id=39848&format=png&color=FFFFFF",
     "knowledge": 70,
     "description": "Skilled in 2D game development with C# and Unity workflows."
   }

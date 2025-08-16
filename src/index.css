@@ -5,7 +5,6 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -20,6 +19,12 @@
 }
 
 body {
-  background-color: white;
-  color: #242424;
+  background-image: url("/src/images/uu.png");
+  background-size: cover; /* fills the whole screen */
+  background-repeat: no-repeat; /* no repeating */
+  background-position: center; /* centered */
+  background-attachment: fixed; /* makes it static */
+  margin: 0;
+  height: 100vh;
+  color: white;
 }

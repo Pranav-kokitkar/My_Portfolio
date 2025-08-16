@@ -1,17 +1,17 @@
-import "./header.css";
+import "../Styles/Skills.css";
 import skillApi from "../Api/skillsApi";
 
 export const Skills = () => {
   return (
     <ul className="skills-container">
-      {skillApi.map((curElem)=>
-        <SkillsCard key ={curElem.id} data={curElem}/>
-      )}
+      {skillApi.map((curElem) => (
+        <SkillsCard key={curElem.id} data={curElem} />
+      ))}
     </ul>
   );
 };
 
-const SkillsCard = ({data}) => {
+const SkillsCard = ({ data }) => {
   const { name, image, knowledge, description } = data;
   return (
     <li className="cards-container">
@@ -19,7 +19,7 @@ const SkillsCard = ({data}) => {
         <img src={image}></img>
       </div>
 
-      <div>
+      <div className="skill-name">
         <p>{name}</p>
       </div>
 
@@ -33,8 +33,3 @@ const SkillsCard = ({data}) => {
     </li>
   );
 };
-
-
-
-
-

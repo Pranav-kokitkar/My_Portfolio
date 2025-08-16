@@ -1,0 +1,19 @@
+.aboutme-container {
+  background-color: transparent;
+  backdrop-filter: blur(5px);
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 25px;
+  padding: 0px 5vw;
+
+  p {
+    padding: 0vh 20vw;
+    span {
+      color: #b570ff;
+    }
+  }
+}

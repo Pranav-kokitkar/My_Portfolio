@@ -1,0 +1,45 @@
+.hero-container {
+  background-color: transparent;
+  backdrop-filter: blur(5px);
+  height: 100vh; /* full viewport height */
+  margin: 0;
+  color: white;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: 0vh 15vw;
+
+  h1 {
+    font-size: 65px;
+  }
+  p {
+    color: #b570ffb4;
+    font-size: 18px;
+    padding-top: 1vh;
+    padding-bottom: 6vh;
+  }
+
+  button {
+    width: 17vw;
+    height: 4.5vh;
+    border-radius: 4px;
+    border: none;
+    background-color: #6e12cf;
+    transition: 0.35s ease-in-out, color 0.35s ease-in-out;
+  }
+  button:hover {
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    background-image: linear-gradient(
+      160deg,
+      rgba(232, 232, 232, 0.203),
+      rgba(255, 255, 255, 0.16)
+    );
+    /* box-shadow: white 0px 1px 10px 0px; */
+    transition: 0.35s ease-in-out, color 0.35s ease-in-out;
+  }
+}
