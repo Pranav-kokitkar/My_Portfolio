@@ -24,7 +24,9 @@ body {
   background-repeat: no-repeat; /* no repeating */
   background-position: center; /* centered */
   background-attachment: fixed; /* makes it static */
+  scroll-behavior: smooth;
   margin: 0;
   height: 100vh;
   color: white;
+  user-select: none;
 }

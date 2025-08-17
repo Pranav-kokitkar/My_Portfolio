@@ -3,7 +3,7 @@ import "../Styles/AboutMe.css";
 
 export const AboutMe =()=>{
     return (
-      <div className="aboutme-container">
+      <div id="AboutMe" className="aboutme-container">
         <h2>About Me</h2>
         <p>
           I’m Pranav Kokitkar, a passionate <span> Web Developer </span> and{" "}

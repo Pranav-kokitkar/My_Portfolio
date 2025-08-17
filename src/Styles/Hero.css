@@ -29,7 +29,7 @@
     border-radius: 4px;
     border: none;
     background-color: #6e12cf;
-    transition: 0.35s ease-in-out, color 0.35s ease-in-out;
+    transition: 0.35s;
   }
   button:hover {
     background-color: transparent;
@@ -40,6 +40,6 @@
       rgba(255, 255, 255, 0.16)
     );
     /* box-shadow: white 0px 1px 10px 0px; */
-    transition: 0.35s ease-in-out, color 0.35s ease-in-out;
+    transition: 0.35s;
   }
 }
