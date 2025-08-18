@@ -1,0 +1,53 @@
+/* Footer.module.css */
+.footerContainer {
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  background-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.301),
+    rgba(48, 48, 48, 0.16)
+  );
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 2vw 3vh;
+}
+
+.lFooter {
+  display: flex;
+  align-items: center;
+  padding-left: 4vw;
+}
+
+.rFooter {
+  display: flex;
+  justify-content: space-between;
+  width: 35%;
+}
+
+.rFooter ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.rFooter li {
+  font-size: 0.7rem;
+  cursor: pointer;
+  padding: 3px 0;
+}
+
+.socialLinks h4,
+.quickLinks h4 {
+  padding-bottom: 1vh;
+  color: #b570ff;
+}
+
+.socialLinks ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.socialLinks ul li a:hover {
+  color: #6e12cf;
+}

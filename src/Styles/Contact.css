@@ -3,6 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 22vh 0vw;
 }
 
 .contact-card {
@@ -77,5 +78,46 @@
 
   textarea {
     height: 17vh;
+  }
+}
+
+.labels {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.labels label {
+  font-size: 0.8rem;
+}
+
+@media (max-width: 590px) {
+  .contact-card {
+    flex-direction: column;
+  }
+
+  .l-contact {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0px 1.2vw;
+  }
+
+  .r-contact {
+    align-items: center;
+    justify-content: center;
+    padding-top: 5vh;
+
+    input,
+    textarea {
+      width: 50vw;
+    }
+  }
+}
+
+@media (max-width: 496px) {
+  .contact-card {
+    width: 70%;
+    height: 100%;
   }
 }

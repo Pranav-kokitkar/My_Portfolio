@@ -1,0 +1,130 @@
+/* Header.module.css */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1.7vh 10vw;
+  gap: 5vw;
+  background-color: transparent;
+  backdrop-filter: blur(5px);
+}
+
+.logo {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.navLinks {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-evenly;
+  margin: 0;
+  padding: 0;
+}
+
+.navLinks li {
+  padding: 0px 100px;
+}
+
+.navLinks li a {
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+}
+
+.hoverUnderline {
+  display: inline-block;
+  position: relative;
+}
+
+.hoverUnderline::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1.6px;
+  bottom: -3px;
+  left: 0;
+  background-color: white;
+  transition: transform 0.25s ease-out;
+}
+
+.hoverUnderline:hover::after {
+  transform: scaleX(1);
+}
+
+/* keep underline when active */
+.hoverUnderlineActive::after {
+  transform: scaleX(1);
+}
+
+/* Styling for active (react-scroll will add the hashed classname) */
+.active {
+  color: #b570ff;
+}
+
+/* Contact button */
+.contactDiv a {
+  padding: 2.2px 12px;
+  border-radius: 999px;
+  background: white;
+  box-shadow: #22073e 0 5px 20px -10px;
+  color: #22073e !important;
+  cursor: pointer;
+  line-height: 24px;
+  border: 0;
+  border: 2px solid transparent; /* keeps size consistent */
+  transition: all 0.3s ease;
+}
+
+.contactDiv a:hover {
+  background-color: transparent;
+  backdrop-filter: blur(20px);
+  color: white !important;
+  border: 2px solid white;
+}
+
+/* Responsive spacing */
+@media (max-width: 1024px) {
+  .navLinks li {
+    padding: 0px 50px;
+  }
+}
+@media (max-width: 768px) {
+  .navLinks li {
+    padding: 0px 20px;
+  }
+}
+@media (max-width: 480px) {
+  .navLinks li {
+    padding: 0px 10px;
+  }
+}
+
+/* Right sticky social icons */
+.rsticky {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  gap: 5vh;
+  z-index: 100;
+}
+
+.rsticky i {
+  font-size: 1.5rem;
+  color: white;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.rsticky i:hover {
+  transform: scale(1.35);
+  color: #b570ff;
+}

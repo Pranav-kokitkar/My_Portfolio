@@ -3,7 +3,7 @@ import "../Styles/AboutMe.css";
 
 export const AboutMe =()=>{
     return (
-      <div id="AboutMe" className="aboutme-container">
+      <section id="about" className="aboutme-container">
         <h2>About Me</h2>
         <p>
           I’m Pranav Kokitkar, a passionate <span> Web Developer </span> and{" "}
@@ -13,6 +13,6 @@ export const AboutMe =()=>{
           projects. My focus is on creating solutions that are not only
           functional but also enjoyable for users.
         </p>
-      </div>
+      </section>
     );
 }

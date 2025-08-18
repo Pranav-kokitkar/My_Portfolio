@@ -1,57 +1,86 @@
 "use client";
 
-import "../Styles/Header.css";
+import styles from "../Styles/Header.module.css";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
-import { Link } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
 
 export const Header = () => {
-  const navlinks = useRef();
+  const navRef = useRef(null);
 
-  useEffect(()=>{
-
-    const ctx = gsap.context(()=>{
-      gsap.from(".nav-links li",{
-        y:-50,
-        stagger: 0.3
+  useEffect(() => {
+    // Use GSAP context and query the list items via ref so hashed classes don't matter
+    const ctx = gsap.context(() => {
+      const items = navRef.current?.querySelectorAll("li");
+      gsap.from(items, {
+        y: -50,
+        opacity: 0,
+        stagger: 0.15,
+        duration: 0.4,
       });
-    }, navlinks);
+    }, navRef);
 
-    return ()=> ctx.revert();
-  },[])
-  
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <nav className="navbar">
-      <ul ref={navlinks} className="nav-links">
+    <nav className={styles.navbar}>
+      <ul ref={navRef} className={styles.navLinks}>
         <li>
-          <a
-            to="AboutMe"
-            smooth={true}
+          <ScrollLink
+            to="about"
+            smooth
             duration={500}
-            className="hover-underline-animation left"
-            href="About me"
+            offset={-80}
+            spy
+            activeClass={styles.active}           // use hashed classname from module
+            className={styles.hoverUnderline}
           >
             About Me
-          </a>
+          </ScrollLink>
         </li>
+
         <li>
-          <a className="hover-underline-animation left" href="skills">
+          <ScrollLink
+            to="skills"
+            smooth
+            duration={500}
+            offset={-80}
+            spy
+            activeClass={styles.active}
+            className={styles.hoverUnderline}
+          >
             Skills
-          </a>
+          </ScrollLink>
         </li>
+
         <li>
-          <a className="hover-underline-animation left" href="projects">
+          <ScrollLink
+            to="projects"
+            smooth
+            duration={500}
+            offset={-80}
+            spy
+            activeClass={styles.active}
+            className={styles.hoverUnderline}
+          >
             Projects
-          </a>
+          </ScrollLink>
         </li>
-        <li className="contact-div">
-          <a>Contact Me</a>
+
+        <li className={styles.contactDiv}>
+          <ScrollLink
+            to="contact"
+            smooth
+            duration={500}
+            offset={-80}
+            spy
+            activeClass={styles.active}
+          >
+            Contact Me
+          </ScrollLink>
         </li>
       </ul>
-
-      {/* <div className="contact-div">
-        <button>Contact Me</button>
-      </div> */}
     </nav>
   );
 };

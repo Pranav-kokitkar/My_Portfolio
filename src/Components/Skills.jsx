@@ -31,11 +31,13 @@ export const Skills = () => {
   }, []);
 
   return (
-    <ul ref={listRef} className="skills-container">
-      {skillApi.map((curElem) => (
-        <SkillsCard key={curElem.id} data={curElem} />
-      ))}
-    </ul>
+    <section id="skills">
+      <ul ref={listRef} className="skills-container">
+        {skillApi.map((curElem) => (
+          <SkillsCard key={curElem.id} data={curElem} />
+        ))}
+      </ul>
+    </section>
   );
 };
 
