@@ -1,6 +1,8 @@
 import "../Styles/Contact.css";
 import React, { useState } from "react";
 import { Link } from "react-scroll";
+import { ToastContainer, toast, Bounce } from "react-toastify";
+
 
 
 
@@ -10,6 +12,7 @@ export const Contact = () => {
 
   const onSubmit = async (event) => {
     event.preventDefault();
+    
     setResult("Sending....");
     const formData = new FormData(event.target);
 
@@ -29,6 +32,19 @@ export const Contact = () => {
       console.log("Error", data);
       setResult(data.message);
     }
+
+
+    toast.success(`Got your message — I’ll reply soon! `, {
+      position: "bottom-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      transition: Bounce,
+    });
   };
 
   return (
@@ -83,6 +99,19 @@ export const Contact = () => {
           <input type="submit" value="Send" className="submit"></input>
         </form>
       </div>
+      <ToastContainer
+        position="bottom-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick={false}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+        transition={Bounce}
+      />
     </section>
   );
 };
